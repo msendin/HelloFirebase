@@ -1,0 +1,145 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"  >
+
+    <Button
+        android:id="@+id/boto"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Write default greeting message to realtime DB"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true">
+    </Button>
+
+    <TextView
+        android:id="@+id/textgreet"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/device_mssg"
+        android:layout_marginTop="21dp"
+        android:layout_below="@+id/boto"
+        android:layout_centerHorizontal="true" />
+
+
+    <TextView
+        android:id="@+id/textview1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="User name"
+        android:layout_marginTop="24dp"
+        android:layout_below="@id/textgreet" />
+
+    <EditText
+        android:id="@+id/edtlogin"
+        android:layout_width="140dp"
+        android:layout_height="wrap_content"
+        android:ems="20"
+        android:layout_below="@id/textview1"
+        android:inputType="textEmailAddress"
+        android:hint="email@domini.com"
+        android:layout_marginTop="23dp" />
+
+    <TextView
+        android:id="@+id/textview2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Password"
+        android:layout_marginTop="19dp"
+        android:layout_below="@id/edtlogin" />
+
+    <EditText
+        android:id="@+id/edtpassw"
+        android:layout_width="140dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/textview2"
+        android:ems="10"
+        android:inputType="textPassword"
+        android:hint="password"
+        android:layout_marginTop="22dp" />
+
+
+    <Button
+        android:id="@+id/botoReg"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Register"
+        android:layout_marginTop="29dp"
+        android:layout_below="@+id/edtpassw"
+        android:layout_toEndOf="@+id/textview1">
+    </Button>
+
+
+    <Button
+        android:id="@+id/botoLogin"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Login"
+        android:layout_alignBaseline="@+id/botoReg"
+        android:layout_alignBottom="@+id/botoReg"
+        android:layout_alignEnd="@+id/boto"
+        android:layout_marginEnd="52dp">
+    </Button>
+
+
+    <Button
+        android:id="@+id/botoLogout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        android:layout_below="@+id/botoReg"
+        android:layout_toStartOf="@+id/botoLogin"
+        android:text="Logout"></Button>
+
+    <TextView
+        android:id="@+id/useruid"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/botoLogout"
+        android:gravity="center" />
+
+    <com.google.android.gms.common.SignInButton
+        android:id="@+id/sign_in_button"
+        android:layout_alignParentEnd="true"
+        android:layout_below="@id/textview1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+
+<!--
+      <Button
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:id="@+id/botoafguser"
+          android:text="Add User"
+          android:layout_alignParentBottom="true"
+          android:layout_above="@+id/subscribeButton"/>
+-->
+
+
+
+
+        <Button
+            android:id="@+id/subscribeButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Subscribe to News"
+            android:layout_marginStart="21dp"
+            android:layout_alignBaseline="@+id/logTokenButton"
+            android:layout_alignBottom="@id/logTokenButton"
+            android:layout_alignStart="@+id/boto">
+        </Button>
+
+        <Button
+            android:id="@id/logTokenButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Log Token"
+            android:layout_marginBottom="25dp"
+            android:layout_alignParentBottom="true"
+            android:layout_toEndOf="@+id/textgreet">
+        </Button>
+
+
+</RelativeLayout>
